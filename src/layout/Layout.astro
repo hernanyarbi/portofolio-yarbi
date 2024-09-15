@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro'
+import '@fontsource-variable/nunito'
+
 interface Props {
     title: string
 }
@@ -15,7 +18,18 @@ const {title} = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative h-screen w-screen bg-slate-950 " >
+		<div class="absolute z-[-2] bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]">
+		</div>
+		<Header/>
+
 		<slot/>
+        
 	</body>
 </html>
+
+<style is:global>
+html{
+	font-family: 'Nunito Variable',  sans-serif;
+}
+</style>
