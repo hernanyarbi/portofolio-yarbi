@@ -5,5 +5,6 @@ export interface ExperienceI {
     company: string,
     description: string,
     technologies?:string[],
-    country: 'spain' | 'argentina' | 'USA' | 'chile'
+    country: 'spain' | 'argentina' | 'USA' | 'chile',
+    link?: string
 }

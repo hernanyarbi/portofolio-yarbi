@@ -1,0 +1,28 @@
+---
+import type {ProjectI} from '../interfaces/ProjectI'
+import ProjectItem from './ProjectItem.astro'
+const projects: ProjectI[]= [
+    {
+        name: 'Suerteo',
+        description: 'Herramienta de seleccion aleatorea para realizar sorteos de manera gratuita. Tambien realizamos sorteos de tecnologia.',
+        technologies: ['REACT', 'TAILWIND'],
+        image: 'suerteo'
+    },
+    {
+        name: 'Clipmaker',
+        description: 'Herramienta para creacion de clips de manera sensilla y rapida.',
+        technologies: ['NEXT', 'TAILWIND'],
+        image: 'suerteo'
+    }
+]
+---
+
+<section id="projects"  class="flex justify-center pt-20 px-10 w-full">
+    <div class="flex flex-col w-full max-w-[800px] gap-10">
+        <h2 class="text-3xl lg:text-4xl font-semibold text-white">Proyectos: </h2>
+        {
+            projects.map(project => <ProjectItem {...project}/>)
+        }
+        
+    </div>
+</section>
