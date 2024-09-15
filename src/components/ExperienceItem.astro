@@ -1,0 +1,28 @@
+---
+const {initDate,
+endDate,
+title,
+company,
+country,
+description} = Astro.props
+---
+
+<li class="mb-10 ms-6">
+    <span
+        class="absolute flex items-center justify-center size-4 bg-blue-900 rounded-full -start-2 mt-1 ring-8 ring-gray-900"
+        >
+        <img src={`/images/country/${country}.png`} alt={`${country} icons created by Freepik - Flaticon`} />
+    </span>
+    <h3 class="flex items-center mb-1 text-2xl font-semibold text-white capitalize">
+        {title}
+        { !endDate && <span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded-lg bg-green-900 text-green-300 ms-3 animate-bounce">
+            Actualmente
+        </span>}
+    </h3>
+    <p class="mb-4 text-lg font-normal text-gray-400 capitalize">{company} - {country}</p>
+    <time class="block mb-2 text-sm font-normal leading-none  text-gray-500">{initDate} - {endDate ?? 'Actualmente'}</time>
+    <p class="mb-4 text-lg font-normal text-gray-300">
+        {description}
+    </p>
+
+</li>

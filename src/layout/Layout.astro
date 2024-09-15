@@ -24,7 +24,6 @@ const {title, description} = Astro.props
 		<div class="absolute z-[-2] bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]">
 		</div>
 		<Header/>
-
 		<slot/>
         
 	</body>
@@ -33,5 +32,6 @@ const {title, description} = Astro.props
 <style is:global>
 html{
 	font-family: 'Nunito Variable',  sans-serif;
+	scroll-behavior: smooth;
 }
 </style>
