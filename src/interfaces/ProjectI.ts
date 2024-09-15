@@ -2,5 +2,6 @@ export interface ProjectI {
     name: string,
     description: string,
     technologies: string[],
-    image: string
+    image: string,
+    preview: string
 }
