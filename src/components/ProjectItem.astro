@@ -11,9 +11,9 @@ const {name ,description, technologies, image,preview}= Astro.props
         <p class="mb-4 text-lg font-normal text-gray-300">
             {description}
         </p>
-        <div class="flex flex-wrap gap-2 mt-4">
+        <ul class="flex flex-wrap gap-2 mt-4">
             {technologies.map((tech:any)=><TechnologieChip technologie={tech}/>)}
-        </div>
+        </ul>
         <div class="flex gap-4 mt-4 animate-pulse">
             <a href={preview}
                 target="_blank"
