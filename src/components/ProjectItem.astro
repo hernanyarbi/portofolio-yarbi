@@ -1,5 +1,5 @@
 ---
-import TechnologieChip from "./TechnologieChip.astro";
+import TechnologyChip from "./TechnologyChip.astro";
 
 const {name ,description, technologies, image,preview}= Astro.props
 ---
@@ -12,7 +12,7 @@ const {name ,description, technologies, image,preview}= Astro.props
             {description}
         </p>
         <ul class="flex flex-wrap gap-2 mt-4">
-            {technologies.map((tech:any)=><TechnologieChip technologie={tech}/>)}
+            {technologies.map((tech:any)=><TechnologyChip technology={tech}/>)}
         </ul>
         <div class="flex gap-4 mt-4 animate-pulse">
             <a href={preview}
