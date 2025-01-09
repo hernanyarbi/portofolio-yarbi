@@ -1,0 +1,123 @@
+---
+import Tailwind from "./icons/Tailwind.astro";
+import NextJS from "./icons/NextJS.astro";
+import ReactJS from "./icons/ReactJS.astro";
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import Postgre from "./icons/Postgre.astro";
+import Styled from "./icons/Styled.astro";
+import Angular from "./icons/Angular.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import Vue from "./icons/Vue.astro";
+import TS from "./icons/TS.astro";
+import aws from "./icons/aws.astro";
+import MySql from "./icons/MySql.astro";
+import Python from "./icons/Python.astro";
+import Java from "./icons/Java.astro";
+import Terraform from "./icons/Terraform.astro";
+import SQLite from "./icons/SQLite.astro";
+import type { TechnologiesType } from "../interfaces/ExperienceI";
+//TODO: ir agregando los chips faltantes
+interface Props {
+  technology: TechnologiesType
+}
+const { technology } = Astro.props;
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-white text-blak",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#23272F] text-white",
+    icon: ReactJS,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-green-950 text-white",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-gray-100 text-black",
+    icon: Express,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#699DC9] text-black",
+    icon: Postgre,
+  },
+  "STYLED COMPONENTS": {
+    name: "Styled Components",
+    class: "bg-gray-600 text-white",
+    icon: Styled,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#23272F] text-white",
+    icon: Angular,
+  },
+  MONGO:{
+    name: "MongoDB",
+    class: "bg-white text-black",
+    icon: MongoDB,
+  },
+  VUE: {
+    name: "Vue",
+    class: "bg-[#23272F] text-white",
+    icon: Vue,
+  },
+  TS: {
+    name: "Type Script",
+    class: "bg-[#23272F] text-white",
+    icon: TS,
+  },
+  VUEX: {
+    name: "Vuex",
+    class: "bg-white text-black",
+    icon: Vue,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-white text-black",
+    icon: aws,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-gray-200 text-black",
+    icon: MySql,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-blue-950 text-white",
+    icon: Python,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-white text-black",
+    icon: Java,
+  },
+  TERRAFORM: {
+    name: "Terraform",
+    class: "bg-purple-200 text-black",
+    icon: Terraform,
+  },
+  SQLITE: {
+    name: "SQLite",
+    class: "bg-gray-200 text-black",
+    icon: SQLite,
+  }
+};
+const chip = TAGS[technology];
+---
+
+<span class={`flex gap-x-2 rounded-full text-xs font-semibold ${chip.class} py-1 px-2 `}>
+  <chip.icon class="size-4" />
+  {chip.name}
+</span>

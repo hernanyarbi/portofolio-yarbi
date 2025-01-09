@@ -1,10 +1,14 @@
 ---
+import type { TechnologiesType } from "../interfaces/ExperienceI"
+import TechnologyChip from "./TechnologyChip.astro"
+
 const {initDate,
 endDate,
 title,
 company,
 country,
-description} = Astro.props
+description,
+technologies} = Astro.props
 ---
 
 <li class="mb-10 ms-6">
@@ -24,5 +28,10 @@ description} = Astro.props
     <p class="mb-4 text-lg font-normal text-gray-300">
         {description}
     </p>
+    <div class="flex gap-3 max-w-xl flex-wrap">
+        {
+            technologies && technologies.map((tech:TechnologiesType) => <TechnologyChip technology={tech} />)
+        }
+    </div>
 
 </li>
