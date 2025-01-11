@@ -16,6 +16,7 @@ import Python from "./icons/Python.astro";
 import Java from "./icons/Java.astro";
 import Terraform from "./icons/Terraform.astro";
 import SQLite from "./icons/SQLite.astro";
+import Nest from "./icons/Nest.astro";
 import type { TechnologiesType } from "../interfaces/ExperienceI";
 //TODO: ir agregando los chips faltantes
 interface Props {
@@ -112,6 +113,11 @@ const TAGS = {
     name: "SQLite",
     class: "bg-gray-200 text-black",
     icon: SQLite,
+  },
+  NEST: {
+    name: "NestJs",
+    class: "bg-gray-200 text-black",
+    icon: Nest,
   }
 };
 const chip = TAGS[technology];
