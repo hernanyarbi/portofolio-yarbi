@@ -5,7 +5,7 @@ export interface ExperienceI {
   company: string;
   description: string;
   technologies?: TechnologiesType[];
-  country: "spain" | "argentina" | "USA" | "chile";
+  country: "spain" | "argentina" | "USA" | "chile" | "remote";
   link?: string;
 }
 
@@ -28,3 +28,4 @@ export type TechnologiesType =
   | "JAVA"
   | "TERRAFORM"
   | "SQLITE"
+  | "NEST"

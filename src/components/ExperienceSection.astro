@@ -1,69 +1,117 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
-import {type ExperienceI} from "../interfaces/ExperienceI"
+import ExperienceItem from "./ExperienceItem.astro";
+import { type ExperienceI } from "../interfaces/ExperienceI";
 
 const experienceData: ExperienceI[] = [
-    {
-        initDate: 'Octubre del 2022',
-        endDate: 'Abril del 2024',
-        title: 'Desarrolador Fullstack',
-        company: 'Alameda Dev',
-        description: 'Tareas principales como Front-End, maquetación desde diseños en Figma y diseños responsivos. Como Back-End creación y estructuración de un proyecto.',
-        country: 'spain',
-        technologies: ['REACT','NEXT','NODE','EXPRESS', 'TS','STYLED COMPONENTS','TAILWIND','POSTGRESQL']
-    },
-    {
-        initDate: 'Diciembre del 2021',
-        endDate: 'Agosto del 2022',
-        title: 'Desarrolador Fullstack',
-        company: 'Aconcagua SF',
-        description: 'Tarea principal, desarrollo de funcionalidades, desde la integración de la base de datos hasta la maquetación de la parte visual.',
-        country: 'argentina',
-        technologies: ['ANGULAR','REACT','NODE','EXPRESS','TS','MONGO']
-    },
-    {
-        initDate: 'Marzo del 2021',
-        endDate: 'Diciembre del 2021',
-        title: 'Desarrolador Front-End',
-        company: 'InMotion Group ',
-        description: 'Tarea principal, desarrollo de funcionalidades, mantenimiento y refactoring de múltiples proyectos.',
-        country: 'chile',
-        technologies: ['VUE','VUEX','PYTHON','AWS','MYSQL']
-    },
-    {
-        initDate: 'Septiembre del 2019',
-        endDate: 'Marzo del 2021',
-        title: 'Desarrolador fullstack',
-        company: 'Valtira ',
-        description: 'Desempeñe tareas de devops, creación de microservice en el Back-End y desarrollo de microfront en el Front-End, colabore en multiples proyectos.',
-        country: 'USA',
-        technologies: ['REACT','ANGULAR','NODE','JAVA','PYTHON','AWS','TERRAFORM','SQLITE',]
-    }
-]
+  {
+    initDate: "Abril del 2024",
+    endDate: "Presente",
+    title: "Desarrollador Freelance y Proyectos Personales",
+    company: "Independiente",
+    description:
+      "Desarrollo de proyectos personales enfocados en tecnologías modernas y mejora continua de habilidades. Implementación de páginas web y sistemas escalables para pequeños negocios. Publicación de contenido técnico en blogs.",
+    country: "remote",
+    technologies: [
+      "REACT",
+      "NEXT",
+      "VUE",
+      "NODE",
+      "NEST",
+      "TAILWIND",
+      "TS",
+    ],
+  },
+  {
+    initDate: "Octubre del 2022",
+    endDate: "Abril del 2024",
+    title: "Desarrolador Fullstack",
+    company: "Alameda Dev",
+    description:
+      "Tareas principales como Front-End, maquetación desde diseños en Figma y diseños responsivos. Como Back-End creación y estructuración de un proyecto.",
+    country: "spain",
+    technologies: [
+      "REACT",
+      "NEXT",
+      "NODE",
+      "EXPRESS",
+      "TS",
+      "STYLED COMPONENTS",
+      "TAILWIND",
+      "POSTGRESQL",
+    ],
+  },
+  {
+    initDate: "Diciembre del 2021",
+    endDate: "Agosto del 2022",
+    title: "Desarrolador Fullstack",
+    company: "Aconcagua SF",
+    description:
+      "Tarea principal, desarrollo de funcionalidades, desde la integración de la base de datos hasta la maquetación de la parte visual.",
+    country: "argentina",
+    technologies: ["ANGULAR", "REACT", "NODE", "EXPRESS", "TS", "MONGO"],
+  },
+  {
+    initDate: "Marzo del 2021",
+    endDate: "Diciembre del 2021",
+    title: "Desarrolador Front-End",
+    company: "InMotion Group ",
+    description:
+      "Tarea principal, desarrollo de funcionalidades, mantenimiento y refactoring de múltiples proyectos.",
+    country: "chile",
+    technologies: ["VUE", "VUEX", "PYTHON", "AWS", "MYSQL"],
+  },
+  {
+    initDate: "Septiembre del 2019",
+    endDate: "Marzo del 2021",
+    title: "Desarrolador fullstack",
+    company: "Valtira ",
+    description:
+      "Desempeñe tareas de devops, creación de microservice en el Back-End y desarrollo de microfront en el Front-End, colabore en multiples proyectos.",
+    country: "USA",
+    technologies: [
+      "REACT",
+      "ANGULAR",
+      "NODE",
+      "JAVA",
+      "PYTHON",
+      "AWS",
+      "TERRAFORM",
+      "SQLITE",
+    ],
+  },
+];
 ---
 
-<section id="experience"  class="flex justify-center pt-20 px-10">
-    <div class="flex flex-col max-w-[800px] gap-10">
-        <h2 class="text-3xl lg:text-4xl font-semibold text-white">Experiencia Laboral: </h2>
-        <ul class="relative border-s border-gray-700 ">                  
-            {
-                experienceData.map((experience)=>
-                    <ExperienceItem {...experience} />
-                )
-            }
-        </ul>
-        <div>
-            <a href="./documents/CV Hernan Yarbi.pdf" 
-                class="inline-flex items-center px-4 py-2 text-sm font-medium   border  rounded-lg  focus:z-10 focus:ring-4 focus:outline-none   bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
-                download>
-                <svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-                    <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-                </svg> 
-                Descargar CV
-            </a>
-        </div>
-        
+<section id="experience" class="flex justify-center pt-20 px-10">
+  <div class="flex flex-col max-w-[800px] gap-10">
+    <h2 class="text-3xl lg:text-4xl font-semibold text-white">
+      Experiencia Laboral:
+    </h2>
+    <ul class="relative border-s border-gray-700">
+      {experienceData.map((experience) => <ExperienceItem {...experience} />)}
+    </ul>
+    <div>
+      <a
+        href="./documents/CV Hernan Yarbi.pdf"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-none bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+        download
+      >
+        <svg
+          class="w-3.5 h-3.5 me-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"
+          ></path>
+          <path
+            d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+          ></path>
+        </svg>
+        Descargar CV
+      </a>
     </div>
-    
+  </div>
 </section>

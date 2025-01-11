@@ -1,30 +1,29 @@
 ---
-import type {ProjectI} from '../interfaces/ProjectI'
-import ProjectItem from './ProjectItem.astro'
-const projects: ProjectI[]= [
-    {
-        name: 'Suerteo',
-        description: 'Herramienta de selección aleatoria para realizar sorteos de manera gratuita. También realizamos sorteos de tecnología.',
-        technologies: ['REACT', 'TAILWIND'],
-        image: 'suerteo',
-        preview: 'https://suerte.suerteo.com.ar/#/game'
-    },
-    {
-        name: 'Clipmaker',
-        description: 'Herramienta para creación de clips de manera sencilla y rápida.',
-        technologies: ['NEXT', 'TAILWIND'],
-        image: 'clipmaker',
-        preview: 'https://clipmaker.yarbi.com.ar/'
-    }
-]
+import type { ProjectI } from "../interfaces/ProjectI";
+import ProjectItem from "./ProjectItem.astro";
+const projects: ProjectI[] = [
+  {
+    name: "Suerteo",
+    description:
+      "Herramienta de selección aleatoria para realizar sorteos de manera gratuita. También realizamos sorteos de tecnología.",
+    technologies: ["REACT", "TAILWIND", "NODE","MONGO"],
+    image: "suerteo",
+    preview: "https://suerte.suerteo.com.ar/#/game",
+  },
+  {
+    name: "Clipmaker",
+    description:
+      "Herramienta para creación de clips de manera sencilla y rápida.",
+    technologies: ["NEXT", "TAILWIND"],
+    image: "clipmaker",
+    preview: "https://clipmaker.yarbi.com.ar/",
+  },
+];
 ---
 
-<section id="projects"  class="flex justify-center pt-20 px-10 w-full">
-    <div class="flex flex-col w-full max-w-[800px] gap-10">
-        <h2 class="text-3xl lg:text-4xl font-semibold text-white">Proyectos: </h2>
-        {
-            projects.map(project => <ProjectItem {...project}/>)
-        }
-        
-    </div>
+<section id="projects" class="flex justify-center pt-20 px-10 w-full">
+  <div class="flex flex-col w-full max-w-[800px] gap-10">
+    <h2 class="text-3xl lg:text-4xl font-semibold text-white">Proyectos:</h2>
+    {projects.map((project) => <ProjectItem {...project} />)}
+  </div>
 </section>
