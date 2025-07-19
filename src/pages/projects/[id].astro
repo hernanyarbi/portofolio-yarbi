@@ -1,0 +1,14 @@
+---
+import Layout from "../../layout/Layout.astro";
+const { id } = Astro.params;
+---
+
+<Layout title={id || "Proyecto"} description="Necesitas una pagina web?">
+  <main class="py-20 size-full overflow-x-hidden scroll-smooth">
+    <section id="projects" class="flex justify-center pt-20 px-10 w-full">
+      <h1 class="text-white">
+        {id}
+      </h1>
+    </section>
+  </main>
+</Layout>
