@@ -1,9 +1,23 @@
+---
+// 1. Define tu fecha base
+const fechaInicio = new Date("2017-05-01");
+const hoy = new Date();
+
+// 2. Calcula la diferencia inicial
+let edad = hoy.getFullYear() - fechaInicio.getFullYear();
+
+// 3. Ajuste preciso (por si aún no ha pasado el mes/día en el año actual)
+const mes = hoy.getMonth() - fechaInicio.getMonth();
+if (mes < 0 || (mes === 0 && hoy.getDate() < fechaInicio.getDate())) {
+    edad--;
+}
+---
 <section class="flex justify-center h-full mb-20 pt-20 md:pt-0 md:mb-0">
     <div class="section flex flex-col-reverse items-center justify-center w-full max-w-[800px] lg:flex-row lg:justify-between">
         <div class="flex flex-col gap-4 p-8">
             <h1 class="text-white text-4xl lg:text-5xl leading-tight">Hola, <br><span class="font-bold">Soy Hernan Yarbi</span></h1>
             <p class="text-white text-xl w-full max-w-[400px]">
-                Desarrollador Web, con más de 8 años de experiencia. Desde Jujuy, Argentina. 
+                Desarrollador Web, con más de {edad} años de experiencia. Desde Jujuy, Argentina. 
             </p>
             <!-- <div class="w-fit text-green-200 font-semibold py-1 px-3 rounded-full border border-green-900 bg-gray-800 animate-pulse  h-fit">Disponible para trabajar</div> -->
             <div class="flex gap-4">
